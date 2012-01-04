@@ -162,11 +162,14 @@ cResponsePacket* cXVDRSession::ReadMessage()
   // Data was read
 
   bool compressed = (channelID & htonl(0x80000000));
+  uint16_t checksum = (channelID >> 8) & 0xFFFF;
+  channelID = ntohl(channelID) & 0xFF;
 
-  if(compressed)
-    channelID ^= htonl(0x80000000);
-
-  channelID = ntohl(channelID);
+  if(checksum != 0)
+  {
+    XBMC->Log(LOG_DEBUG, "packet with wrong checksum - dropping");
+    return NULL;
+  }
 
   if (channelID == XVDR_CHANNEL_STREAM)
   {
