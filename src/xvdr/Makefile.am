@@ -26,6 +26,10 @@ libxvdraddon_la_SOURCES += \
     $(top_srcdir)/addons/library.xbmc.addon/dlfcn-win32.c
 endif
 
+if ANDROID
+libxvdraddon_la_CPPFLAGS = -DANDROID
+endif
+
 libxvdraddon_la_LDFLAGS = \
 	-avoid-version
 
