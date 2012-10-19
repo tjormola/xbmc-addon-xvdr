@@ -69,6 +69,7 @@ case $host in
     ISAPPLE=true
     ;;
   *-androideabi)
+    AC_SUBST(ARCH_DEFINES, "-DANDROID")
     ADDONNAME=libXBMC_VDR_xvdr.so
     ISANDROID=true
     ;;

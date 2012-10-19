@@ -26,10 +26,6 @@ noinst_LTLIBRARIES = libxvdrstatic.la
 libxvdrstatic_la_SOURCES = \
 	$(SOURCEFILES)
 
-if ANDROID
-libxvdrstatic_la_CPPFLAGS = -DANDROID
-endif
-
 if MINGW32
 libxvdrstatic_la_LIBADD = \
 	-L$(srcdir)/pthreads-win32 -lpthreadGC2 -lws2_32
@@ -46,10 +42,6 @@ lib_LTLIBRARIES = libxvdr.la
 
 libxvdr_la_SOURCES = \
 	$(SOURCEFILES)
-
-if ANDROID
-libxvdr_la_CPPFLAGS = -DANDROID
-endif
 
 if MINGW32
 libxvdr_la_LIBADD = \
