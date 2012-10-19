@@ -45,7 +45,6 @@ ISMINGW32=false
 ADDONNAME=XBMC_VDR_xvdr.pvr
 SOEXT=so
 ISAPPLE=false
-ISANDROID=false
 
 case $host in
   *-*-cygwin* | *-*-mingw32*)
@@ -71,13 +70,11 @@ case $host in
   *-androideabi)
     AC_SUBST(ARCH_DEFINES, "-DANDROID")
     ADDONNAME=libXBMC_VDR_xvdr.so
-    ISANDROID=true
     ;;
 esac
 
 AM_CONDITIONAL([MINGW32], $ISMINGW32)
 AM_CONDITIONAL([APPLE], $ISAPPLE)
-AM_CONDITIONAL([ANDROID], $ISANDROID)
 AC_SUBST(ADDONNAME)
 AC_SUBST(SOEXT)
 
