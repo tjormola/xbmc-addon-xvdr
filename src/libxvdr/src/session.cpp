@@ -23,6 +23,8 @@
  *
  */
 
+#include "os-config.h"
+
 #include "xvdr/clientinterface.h"
 #include "xvdr/session.h"
 #include "xvdr/msgpacket.h"
@@ -36,8 +38,6 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
-#include "os-config.h"
 
 using namespace XVDR;
 

@@ -23,8 +23,8 @@
  */
 
 #include <stdarg.h>
-#include "xvdr/clientinterface.h"
 #include "os-config.h"
+#include "xvdr/clientinterface.h"
 
 using namespace XVDR;
 

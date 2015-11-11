@@ -24,7 +24,6 @@
 
 // WINDOWS
 #ifdef WIN32
-#include <stdint.h>
 
 #define syslog(s, msg, ...) std::cout << msg << std::endl;
 #define _WIN32_WINNT 0x0501
@@ -44,6 +43,7 @@
 
 #define OS_PATH_SEPARATOR '\\'
 
+#include <stdint.h>
 #include <iostream>
 #include <winsock2.h>
 #include <ws2spi.h>

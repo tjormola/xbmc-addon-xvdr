@@ -26,9 +26,7 @@
 #include "config.h"
 #endif
 
-#ifdef HAVE_ZLIB
-#include <zlib.h>
-#endif
+#include "os-config.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -36,8 +34,11 @@
 #include <iostream>
 #include <unistd.h>
 
-#include "os-config.h"
 #include "xvdr/msgpacket.h"
+
+#ifdef HAVE_ZLIB
+#include <zlib.h>
+#endif
 
 #define get_impl(T, f) \
 	if((m_readposition + sizeof(T)) > m_usage) { \

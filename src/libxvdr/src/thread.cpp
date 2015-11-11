@@ -28,14 +28,14 @@
  * Most of this code is taken from thread.c in the Video Disk Recorder ('VDR')
  */
 
+#include "os-config.h"
+
 #include <stdarg.h>
 #include <stdlib.h>
 #include <sys/time.h>
 
 #include "xvdr/thread.h"
 #include "xvdr/clientinterface.h"
-
-#include "os-config.h"
 
 using namespace XVDR;
 
