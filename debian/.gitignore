@@ -4,3 +4,5 @@ stamp-patched
 patched
 files
 xbmc-addon-xvdr
+*~
+.*.sw?

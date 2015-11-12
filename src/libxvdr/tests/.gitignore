@@ -1,6 +1,14 @@
-.deps
+*.lo
 *.o
+.deps
+.libs
 demux
 listener
 ac3analyze
 scanner
+demux.exe
+listener.exe
+ac3analyze.exe
+scanner.exe
+*~
+.*.sw?
