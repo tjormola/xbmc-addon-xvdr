@@ -37,7 +37,7 @@ libxvdraddon_la_LIBADD = \
 
 if MINGW32
 libxvdraddon_la_LIBADD += \
-	-L$(srcdir)/../libxvdr/src/pthreads-win32 -lpthreadGC2 -lws2_32
+	-L$(srcdir)/../libxvdr/src/pthreads-win32 -lpthreadGC2 -lws2_32 -lpsapi
 else
 libxvdraddon_la_LIBADD += \
 	$(PTHREAD_LIBS)
