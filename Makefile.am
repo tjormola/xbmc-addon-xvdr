@@ -9,10 +9,10 @@ DIST_SUBDIRS = \
 	data
 
 install-lib:
-	make -C src/libxvdr/src install-lib
+	$(MAKE) -C src/libxvdr/src install-lib
 
 install-include:
-	make -C src/libxvdr/src install-include
+	$(MAKE) -C src/libxvdr/src install-include
 
 dist-zip: all
 	cp -r addons/pvr.vdr.xvdr .
@@ -36,10 +36,10 @@ endif
 
 dist-git: all
 	GIT_REV=`git --no-pager log --abbrev=7 -n 1 --pretty=format:"%h %ci" HEAD | cut -f1 -d' '` ; \
-	make VERSION=$$GIT_REV dist
+	$(MAKE) VERSION=$$GIT_REV dist
 
 repo: all dist-zip
-	make -C data all
+	$(MAKE) -C data all
 	rm -Rf addon-repository
 	mkdir -p addon-repository/pvr.vdr.xvdr
 	cp pvr.vdr.xvdr-$(VERSION).zip addon-repository/pvr.vdr.xvdr
@@ -48,7 +48,7 @@ repo: all dist-zip
 	cp data/addons.xml.md5 addon-repository
 
 repo-daily: all dist-zip-daily
-	make -C data all
+	$(MAKE) -C data all
 	rm -Rf addon-repository
 	mkdir -p addon-repository/pvr.vdr.xvdr
 	cp pvr.vdr.xvdr-$(VERSION).$(DATE).zip addon-repository/pvr.vdr.xvdr

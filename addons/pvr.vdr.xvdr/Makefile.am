@@ -11,7 +11,7 @@ addon_DATA += \
 endif
 
 $(ADDONNAME):
-	make -C ../../src
+	$(MAKE) -C ../../src
 
 install-data-hook: $(ADDONNAME)
 	cp -Rf "$(srcdir)/resources" "$(DESTDIR)$(addondir)"
