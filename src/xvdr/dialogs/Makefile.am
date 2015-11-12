@@ -14,9 +14,7 @@ libxvdrdialogs_la_SOURCES = \
 	$(SOURCEFILES)
 
 AM_CPPFLAGS = \
-	$(ARCH_DEFINES)
-
-INCLUDES = \
+	$(ARCH_DEFINES) \
 	-I$(top_srcdir) \
 	-I$(top_srcdir)/src/libxvdr/include \
 	-I$(srcdir)/.. \

@@ -46,5 +46,5 @@ ac3analyze_LDADD = \
 	../src/libxvdrstatic.la \
 	$(ADD_LIBS)
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(srcdir)/../include

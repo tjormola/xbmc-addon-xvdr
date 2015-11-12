@@ -44,9 +44,7 @@ libxvdraddon_la_LIBADD += \
 endif
 
 AM_CPPFLAGS = \
-	$(ARCH_DEFINES)
-
-INCLUDES = \
+	$(ARCH_DEFINES) \
 	-I. \
 	-I$(srcdir)/dialogs \
 	-I$(top_srcdir)/src/libxvdr/include \

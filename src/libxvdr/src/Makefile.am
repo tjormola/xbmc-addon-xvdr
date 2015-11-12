@@ -59,9 +59,8 @@ libxvdr_la_LDFLAGS = \
 
 
 AM_CPPFLAGS = \
-	$(ARCH_DEFINES)
-
-INCLUDES = -I$(srcdir)/../include
+	$(ARCH_DEFINES) \
+	-I$(srcdir)/../include
 
 install:
 
